@@ -1,2 +1,3 @@
-arr: list = [i for i in range(6, 11)]
-print("Original array:", arr,"\nNew array:", [i+2 for i in arr if i > 5])
+arr = [2, 8, 9, 48, 8, 22, -12, 2]
+print(arr)
+print([i + 2 for i in arr if i > 5])
