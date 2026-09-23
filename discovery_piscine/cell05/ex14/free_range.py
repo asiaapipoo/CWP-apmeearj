@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
 import sys
 
-try: a, b = map(int, sys.argv[1:3]); print(list(range(a, b + 1)))
-except: print("none")
+if len(sys.argv) == 3:
+    try:
+        a = int(sys.argv[1])
+        b = int(sys.argv[2])
+        step = 1 if a <= b else -1
+        print(list(range(a, b + step, step)))
+    except ValueError:
+        print("none")
+else:
+    print("none")
